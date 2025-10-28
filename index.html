@@ -1,0 +1,200 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Subhashini S | Portfolio</title>  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  
+  <style>  
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }  
+    body { background-color: #f5f8fc; color: #333; }  
+  
+    /* Navbar */  
+    nav {  
+      position: fixed; top: 0; width: 100%;  
+      background-color: #0d47a1; display: flex; justify-content: space-between; align-items: center;  
+      padding: 1rem 2rem; z-index: 1000; box-shadow: 0 4px 8px rgba(0,0,0,0.1);  
+    }  
+    nav h1 { color: white; font-size: 1.5rem; }  
+    nav ul { list-style: none; display: flex; }  
+    nav ul li { margin: 0 15px; }  
+    nav ul li a {  
+      color: white; text-decoration: none; font-weight: 500; transition: color 0.3s ease;  
+    }  
+    nav ul li a:hover { color: #90caf9; }  
+    .menu-toggle { display: none; color: white; font-size: 1.8rem; cursor: pointer; }  
+  
+    /* Header */  
+    header {  
+      display: flex; flex-direction: column; align-items: center; justify-content: center;  
+      text-align: center; padding-top: 120px; background: linear-gradient(to bottom right,#1976d2,#42a5f5);  
+      color: white; height: 100vh;  
+    }  
+    header img {  
+      width: 160px; height: 160px; border-radius: 50%; border: 4px solid white; margin-bottom: 1rem;  
+      object-fit: cover; box-shadow: 0 0 20px rgba(255,255,255,0.3);  
+    }  
+    header h2 { font-size: 2rem; margin-bottom: .5rem; }  
+    header p { font-size: 1.1rem; margin-bottom: 1rem; }  
+    .resume-btn {  
+      background-color: white; color: #0d47a1; border: none; padding: .8rem 1.4rem; border-radius: 25px; font-weight: bold;  
+      cursor: pointer; transition: all .3s ease;  
+    }  
+    .resume-btn:hover { background-color: #e3f2fd; transform: scale(1.05); }  
+  
+    /* Sections */  
+    section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }  
+    h2 {  
+      text-align: center; color: #0d47a1; font-size: 2rem; margin-bottom: 2rem; position: relative;  
+    }  
+    h2::after {  
+      content: ""; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);  
+      width: 80px; height: 3px; background-color: #1976d2;  
+    }  
+    .skills-list, .project-list, .achievement-list { list-style: none; padding: 0; }  
+    .skills-list li, .project-card, .achievement-list li {  
+      background: white; padding: 1rem; margin-bottom: 1rem;  
+      border-left: 5px solid #1976d2; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.1);  
+    }  
+    .project-card h3 { margin-bottom: .5rem; }  
+    .btn-links a {  
+      display: inline-block; margin-right: 10px; margin-top: .5rem; text-decoration: none;  
+      padding: .5rem 1rem; border-radius: 20px; font-size: .9rem; font-weight: 500;  
+    }  
+    .github-btn { background: #24292e; color: white; }  
+    .live-btn { background: #1976d2; color: white; }  
+    .btn-links a:hover { opacity: .8; }  
+  
+    .contact p { text-align: center; margin: .5rem 0; }  
+    .contact a { color: #0d47a1; text-decoration: none; font-weight: 500; }  
+    .contact a:hover { text-decoration: underline; }  
+  
+    footer { background-color: #0d47a1; color: white; text-align: center; padding: 1rem; }  
+  
+    @media (max-width: 768px) {  
+      nav ul {  
+        flex-direction: column; background-color: #0d47a1; position: absolute; top: 70px; left: 0; width: 100%; display: none;  
+      }  
+      nav ul.show { display: block; }  
+      nav ul li { margin: 15px 0; text-align: center; }  
+      .menu-toggle { display: block; }  
+      header { padding-top: 140px; }  
+    }  
+  </style>  
+</head>  
+<body>  
+  
+  <!-- Navigation -->  
+  <nav>  
+    <h1>Subhashini S</h1>  
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>  
+    <ul id="menu">  
+      <li><a href="#home">Home</a></li>  
+      <li><a href="#about">About</a></li>  
+      <li><a href="#education">Education</a></li>  
+      <li><a href="#skills">Skills</a></li>  
+      <li><a href="#projects">Projects</a></li>  
+      <li><a href="#achievements">Achievements</a></li>  
+      <li><a href="#contact">Contact</a></li>  
+    </ul>  
+  </nav>  
+  
+  <!-- Header -->  
+  <header id="home">  
+    <img src="profile.jpg" alt="Profile Photo">  
+    <h2>Hello, I'm Subhashini S</h2>  
+    <p>Aspiring Software Developer | Java | HTML | CSS | IoT Enthusiast</p>  
+    <button class="resume-btn" onclick="window.open('Subhashini_Resume.pdf', '_blank')">Download Resume</button>  
+  </header>  
+  
+  <!-- About -->  
+  <section id="about">  
+    <h2>About Me</h2>  
+    <p style="text-align:center; max-width:800px; margin:auto;">  
+      I'm <strong>Subhashini S</strong>, currently pursuing my <strong>B.E. Computer Science (IoT)</strong> in 3rd year at  
+      <strong>Nandha Engineering College</strong>. I’m passionate about integrating IoT and software technologies to create smart, real-world solutions.  
+      I enjoy solving problems, learning new tools, and working on innovative projects that improve daily life.  
+    </p>  
+  </section>  
+  
+  <!-- Education -->  
+  <section id="education">  
+    <h2>Education</h2>  
+    <ul class="skills-list">  
+      <li><strong>B.E. CSE (IoT)</strong> — Nandha Engineering College, Erode (3rd Year)</li>  
+      <li><strong>HSC</strong> — Government Girls Higher Secondary School</li>  
+      <li><strong>SSLC</strong> — Government Girls Higher Secondary School</li>  
+    </ul>  
+  </section>  
+  
+  <!-- Skills -->  
+  <section id="skills">  
+    <h2>Skills</h2>  
+    <ul class="skills-list">  
+      <li>Java (Basics)</li>  
+      <li>HTML & CSS</li>  
+      <li>IoT Concepts & Applications</li>  
+      <li>Python & OpenCV (for AI Projects)</li>  
+    </ul>  
+  </section>  
+  
+  <!-- Projects -->  
+  <section id="projects">  
+    <h2>Projects</h2>  
+  
+    <div class="project-card">  
+      <h3>Smart Gas Stove Safety Knob</h3>  
+      <p>IoT system that automatically turns off the gas when unattended for safety.</p>  
+      <p><em>Tech:</em> ESP32, Gas Sensor, Servo Motor, Buzzer</p>  
+      <div class="btn-links">  
+        <a href="https://github.com/Subhashini934" target="_blank" class="github-btn">GitHub</a>  
+      </div>  
+    </div>  
+  
+    <div class="project-card">  
+      <h3>AI-Powered Micro-Nap Detector</h3>  
+      <p>Detects driver drowsiness using facial recognition and triggers alerts to prevent accidents.</p>  
+      <p><em>Tech:</em> Python, OpenCV, Machine Learning</p>  
+      <div class="btn-links">  
+        <a href="https://github.com/Subhashini934" target="_blank" class="github-btn">GitHub</a>  
+      </div>  
+    </div>  
+  
+    <div class="project-card">  
+      <h3>Smart Pill Dispenser System</h3>  
+      <p>IoT-based device that reminds users to take medicines and sends WhatsApp alerts.</p>  
+      <p><em>Tech:</em> ESP32, Ultrasonic Sensor, Twilio API</p>  
+      <div class="btn-links">  
+        <a href="https://github.com/Subhashini934" target="_blank" class="github-btn">GitHub</a>  
+      </div>  
+    </div>  
+  </section>  
+  
+  <!-- Achievements -->  
+  <section id="achievements">  
+    <h2>Achievements</h2>  
+    <ul class="achievement-list">  
+      <li>🏃‍♀ 3rd place in 800m & 1500m (College Athletics Meet)</li>  
+      <li>🏅 Participation in “Hackathon” Events</li>  
+    </ul>  
+  </section>  
+  
+  <!-- Contact -->  
+  <section id="contact" class="contact">  
+    <h2>Contact</h2>  
+    <p>📧 <a href="mailto:subasinisivakumar04@gmail.com">subasinisivakumar04@gmail.com</a></p>  
+    <p>🔗 <a href="https://www.linkedin.com/in/subhashini-s-444b522a3" target="_blank">LinkedIn</a></p>  
+    <p>💻 <a href="https://github.com/Subhashini934" target="_blank">GitHub</a></p>  
+  </section>  
+  
+  <footer>  
+    <p>© 2025 Subhashini S | All Rights Reserved</p>  
+  </footer>  
+  
+  <script>  
+    function toggleMenu() {  
+      document.getElementById('menu').classList.toggle('show');  
+    }  
+  </script>  
+</body>  
+</html>
